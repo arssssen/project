@@ -1,0 +1,565 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+html,body{
+    background: black;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+    background-image: url("imgs/bcg1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.homeimg{
+  
+    margin: auto;
+    height: 600px;
+    border: none;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;;
+    background-image: url(imgs/Arctic\ Monkeys2.jpg);
+}
+.AM{
+    font-family: 'Poppins','sans-serif';
+    text-align: center;
+    margin-top: 50px;
+}
+.homeimg .blur{
+    -webkit-filter: blur(10px);
+  	-moz-filter: blur(10px);
+  	-o-filter: blur(10px);
+  	-ms-filter: blur(10px);
+  	filter: blur(10px);
+}
+
+
+@keyframes checked-anim {
+    50% {
+        width: 3000px;
+        height: 500px;
+    }
+    100% {
+        width: 100%;
+        height: 55%;
+        border-radius: 0;
+    }
+}
+@keyframes not-checked-anim {
+    0% {
+        width: 3000px;
+        height: 600px;
+    }
+}
+.homeimg li, a {
+    margin:0px 0 0px 0;
+    font-family: "Poppins", sans-serif;
+    outline: 0;
+    display: none;
+    text-align: center;
+}
+
+
+
+
+.homeimgoff a:focus {
+    display: block;
+    color: #333;
+    background-color: #eee;
+    transition: all .5s;
+}
+
+
+
+
+
+#trigger, #burger, #burger:before, #burger:after {
+    position: fixed;
+    top: 23px;
+    left: 15px;
+    background: rgb(255, 255, 255);
+    width: 25px;
+    height: 3px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+#trigger {
+    height: 35px;
+    background: none;
+}
+#burger:before {
+    content: " ";
+    top: 30px;
+    left: 10;
+}
+#burger:after {
+    content: " ";
+    top: 37px;
+    left: 10;
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 35px;
+    transform: rotate(180deg);
+    transition: transform .2s ease;
+}
+
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -2px;
+    left: 18px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform .2s ease;
+
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 2px;
+    left: 18px;
+    transform: rotate(-45deg) translateX(-5px);
+    transition: transform .2s ease;
+}
+#menu {
+    
+    position: fixed;
+    margin: 0; padding: 0;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    animation: not-checked-anim 0.4s both;
+    transition: .2s;
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 1s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+    display: block;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+
+// // // // // // // // // // // // // // // // // // // // 
+.homeimg ul { 
+    position: relative;
+} 
+.homeimg  ul li { 
+    list-style: none; 
+    text-align: center; 
+
+} 
+.homeimg ul li a { 
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    font-size: 3em; 
+    padding: 5px 20px; 
+    display: inline-flex;
+    font-weight: 700; 
+    transition: 0.5s;
+
+
+}
+.homeimg ul:hover li a { 
+    color: rgba(255, 255, 255, 0.801);
+
+
+} 
+.homeimg    ul li:hover a { 
+    color: #000; 
+    background: rgba(255,255,255,1);
+
+
+}
+.homeimg ul li a:before { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; left: 40%; 
+    transform: translate(-50%,-50%); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 5em; 
+    color: rgb(255, 255, 255); 
+    border-radius: 50%; 
+    z-index: -1; 
+    opacity: 0; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    letter-spacing: 500px; 
+    transition: letter-spacing 0.5s,left 0.5s; } 
+.homeimg ul li a:hover:before { 
+    content: attr(data-text);
+    color: rgb(255, 255, 255); 
+    opacity: 1; left: 50%; 
+    letter-spacing: 10px; 
+    width: 1800px; 
+    height: 1800px; } 
+
+
+//////////////////////////////////////////////////// 
+
+
+.main{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: fit-content;
+    .picmain{
+        margin-left: 80px;
+        width: 500px;
+    }
+    .textmain{
+        width: 600px;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 100px;
+        color: white;
+        .LatestRelease{
+            font-weight: normal;
+            letter-spacing: 4px;
+        }
+        .albumname{
+            margin-top: -30px;
+            color: #FDD752;
+            font-size: 40px;
+            letter-spacing: 2px;
+
+        }
+        .infoalbum{
+            margin-top: -10px;
+            color: gray;
+            letter-spacing: 0.5px;
+        }
+        .refs{
+            display: flex;
+            .linkbtn{
+                padding: 10px 20px;
+                margin-right: 25px;
+                width: 100px;
+                background-color: white;
+                border: white 1px solid;
+                border-radius: 5px;
+                text-decoration: none;
+                text-align: center;
+                color: black;
+
+                .linkiconsp{
+                    margin-right: 25px;
+                    width: 20px;
+                    vertical-align:-4px;
+                }
+                .linkiconit{
+                    margin-right: 27px;
+                    width: 20px;
+                    vertical-align:-2px;
+                }
+                .linkiconyt{
+                    margin-right: 13px;
+                    width: 20px;
+                    vertical-align:-4px;
+                }
+
+            }
+            @keyframes btnlink {
+                from{background-color: white;color: black;}
+                to{background-color: rgba(0, 0, 0, 0);color:white }
+                
+            }
+            .linkbtn:hover{
+                animation-name: btnlink;
+                animation-duration: 0.2s;
+                animation-timing-function: ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+
+    }
+    
+}
+.mainvideo{
+    height: fit-content;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .vid{
+        border: none;
+    }
+}
+
+
+
+.albums{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    
+}
+
+
+
+.textalbum{
+    width: 650px;
+    margin-left: 90px;
+    h1{
+        letter-spacing: 2px;
+
+        font-size: 40px;
+        color: white;
+    }
+    p{
+        letter-spacing: 0.5px;
+        margin-top: -15px;
+        color: gray;
+    }
+
+    .albumlinkbtn{
+        padding: 10px 60px;
+        width: 100px;
+        background-color: #FDD752;
+        border: #FDD752 1px solid;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+    }
+    @keyframes albumbtnlink {
+        from{background-color: #FDD752;color: black;}
+        to{background-color: rgba(0, 0, 0, 0);color:#FDD752 }
+        
+    }
+    .albumlinkbtn:hover{
+        animation-name: albumbtnlink;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+.picalbum{
+    width: 500px;
+    border: white 10px solid;
+    margin-left: 50px;
+}
+
+
+.live{
+    background-image: url(imgs/alexturner.jpg);
+    background-size: cover;
+    background-position-x: center;;
+    width: 60%;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 30px;
+    .livebtn{
+        padding: 10px 60px;
+        width: 100px;
+        background-color: #FDD752;
+        border: #FDD752 1px solid;
+        border-radius: 15px;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 40px;
+    }
+    @keyframes livebtn {
+        from{background-color: #FDD752;color: black;}
+        to{background-color: rgba(0, 0, 0, 0);color:#FDD752; }
+        
+    }
+    .livebtn:hover{
+        animation-name: livebtn;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+    
+
+
+}
+.live:hover{
+    animation-name: livebcg;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes Gradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.waves{
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(245deg,#000000,rgb(255, 255, 255),black,white);
+    background-size: 600% 600%;
+    -webkit-animation: Gradient 16s ease infinite;
+    -moz-animation: Gradient 16s ease infinite;
+    animation: Gradient 16s ease infinite;
+}
+.wavesend{
+    margin-top: 40px;
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(245deg,#000000,rgb(255, 255, 255),black,white);
+    background-size: 600% 600%;
+    -webkit-animation: Gradient 16s ease infinite;
+    -moz-animation: Gradient 16s ease infinite;
+    animation: Gradient 16s ease infinite;
+}
+.waves3{
+    margin-top: 20px;
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.1;
+}
+.waves2{
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.1;
+}
+.wavesalbum{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.1;
+}
+
+
+
+footer{
+    background-image: url(imgs/bcgww.jpg);
+    background-position: center;
+    min-height: 320px;
+    padding: 5% 5% 100px;
+    position: relative;
+    color: white;
+    font-family: 'Poppins','sans-serif';
+    display: flex;
+    .wavesfooter{
+        width: 500px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    .textfoot{
+        position: relative;
+        left: 3%;
+        font-size: 20px;
+        ul{
+            margin-left: -40px; 
+            list-style-type: none;
+            li,a{
+                text-align: start;
+            }
+            @keyframes iconsfoot {
+                from{opacity: 100%;}
+                to{opacity: 50%;}
+                
+            }
+            a:hover{
+                animation-name: iconsfoot;
+                animation-duration: 0.2s;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+                
+            }
+        }
+        p{
+            position: relative;
+            top:20%;
+        }
+    }
+}
+.icons{
+    
+    position: relative;
+    left: 80%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    a{
+    
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    @keyframes iconsfoot {
+        from{opacity: 100%;}
+        to{opacity: 50%;}
+        
+    }
+    a:hover{
+        animation-name: iconsfoot;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        
+    }
+}
+
+.posters{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .poster{
+        border-radius: 20px;
+        margin:20px;
+        width: 250px;
+    }
+    @keyframes iconsfoot {
+        from{opacity: 100%;}
+        to{opacity: 50%;}
+        
+    }
+    a:hover{
+        animation-name: iconsfoot;
+        animation-duration: 0.1s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        
+    }
+}
+
+
