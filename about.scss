@@ -344,6 +344,7 @@ footer{
     .mempics{
         display: flex;
         .currentmemberspic{
+            background-color: rgba(255, 255, 255, 0.082);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -351,8 +352,8 @@ footer{
             align-items: center;
             .pic{
                 width: 300px;
-                border-radius: 50%;
-                border: rgb(255, 235, 120) 5px solid;
+                border-radius: 0px;
+                border: rgba(255, 255, 255, 0) 5px solid;
 
             }
             a{  
@@ -371,6 +372,7 @@ footer{
                 animation-fill-mode: forwards;
             }
             ul{
+                margin-top: -10px;
                 font-size: 20px;
                 color: white;
                 width: 250px;
@@ -481,3 +483,257 @@ footer{
         border: rgba(255, 255, 255, 0.192) 10px solid;
     }
 }
+
+
+
+.carousel-container{
+    border-radius: 20px;
+    width: 49%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border: rgba(255, 255, 255, 0.096) 5px solid;
+}
+.carousel-slide{
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+@keyframes posteranim {
+
+    from{}
+    to{ background-color: rgb(255, 255, 255);color:rgb(0, 0, 0) }
+    
+}
+#prevBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    z-index: 10;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover{
+        cursor: pointer;
+        animation-name: posteranim;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+}
+#nextBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 10;
+    font-size: 30px;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover{
+        cursor: pointer;
+        animation-name: posteranim;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+}
+@media screen and (max-width: 375px) {
+    
+    
+    .icons{
+    left: 35%;
+
+    }
+    .abouttitle{
+        h1{
+            margin-top: 40px;
+            }}
+
+    footer{
+        
+        background-image: none;
+        background-color: #000;
+    }
+
+    .currentmembers{
+        margin: auto;
+        h1{
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+        .mempics{
+            display: flex;
+            flex-direction: column;
+            .currentmemberspic{
+                margin-bottom: 20px;
+                background-color: rgba(255, 255, 255, 0.082);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .pic{
+                    width: 300px;
+                    border-radius: 0px;
+                    border: rgba(255, 255, 255, 0) 5px solid;
+    
+                }
+                a{  
+                
+                    text-decoration: none;
+                    h1{
+                    color:rgb(255, 235, 120);
+                    font-size: 30px;
+                    font-weight: normal;
+                    }
+                }   
+                a:hover{
+                    animation-name: iconsfoot;
+                    animation-duration: 0.2s;
+                    animation-timing-function: ease-in;
+                    animation-fill-mode: forwards;
+                }
+                ul{
+                    margin-top: -10px;
+                    font-size: 20px;
+                    color: white;
+                    width: 250px;
+    
+                }
+            }
+    
+        }
+    }
+ 
+    
+    .history{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        .historytext{
+            p{
+                margin-left: -40px;
+                letter-spacing: 0.5px;
+                width: 300px;
+                color: rgb(255, 255, 255);
+                font-size: 15px;
+            }
+        
+    
+        }
+    
+        .historypic{
+            margin-left: 25px;
+
+            width: 300px;
+            border: rgba(255, 255, 255, 0.192) 10px solid;
+        }
+    
+    }
+    .history2{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        .historytext2{
+            p{
+                margin-left: 25px;
+
+                letter-spacing: 0.5px;
+                width: 300px;
+                color: rgb(255, 255, 255);
+                font-size: 15px;
+            }
+        
+    
+        }
+    
+        .historypic2{
+            margin-left: 25px;
+
+            height: 200px;
+            width: 300px;
+            border: rgba(255, 255, 255, 0.192) 10px solid;
+        }
+    
+    }
+    .history3{
+        width: 100%;
+        margin-top: 50px;
+        margin-left: -50px;
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 25px;
+    
+            color: white;
+        }
+        .historytext3{
+            p{
+                width: 300px;
+                letter-spacing: 0.5px;
+                color: rgb(255, 255, 255);
+                font-size: 15px;
+            }
+        
+    
+        }
+        .historytext4{
+            p{
+                width: 300px;
+                letter-spacing: 0.5px;
+                color: rgb(255, 255, 255);
+                font-size: 15px;
+            }
+        
+    
+        }
+    
+        .historypic3{
+            margin-left: 80px;
+            height: 300px;
+            width: 500px;
+            border: rgba(255, 255, 255, 0.192) 10px solid;
+        }
+    }
+        @keyframes checked-anim {
+            50% {
+                width: 600px;
+                height: 500px;
+            }
+            100% {
+                width: 375px;
+                height: 60%;
+                border-radius: 0;
+            }
+        }
+        .picg{width: 300px;height: 200px;}
+        .carousel-container{
+            border-radius: 20px;
+            width: 70%;
+            height: 200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            border: rgba(255, 255, 255, 0.096) 5px solid;
+        }
+}
+
+

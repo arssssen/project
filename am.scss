@@ -6,7 +6,7 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins','sans-serif';
-    background-image: url("imgs/bcgvynilbw2.png");
+    background-image: url("imgs/vinyl_image.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -831,5 +831,247 @@ button:focus{
     }
 
   }
-  #zatemnenie3:target,#zatemnenie4:target,#zatemnenie5:target,#zatemnenie6:target, #zatemnenie7:target,#zatemnenie9:target,#zatemnenie10:target,#zatemnenie11:target,#zatemnenie12:target,{display: block;}
+  #zatemnenie3:target,#zatemnenie4:target,#zatemnenie5:target,#zatemnenie6:target, #zatemnenie7:target,#zatemnenie9:target,#zatemnenie10:target,#zatemnenie11:target,#zatemnenie12:target{display: block;}
  
+  @media screen and (max-width: 375px) {
+    
+    
+    .icons{
+    left: 35%;
+
+    }
+    .abouttitle{
+        h1{
+            margin-top: 40px;
+            }}
+
+    footer{
+        
+        background-image: none;
+        background-color: #000;
+    }
+    .am{
+        display: flex;
+        flex-direction: column;
+    }
+    .albums{
+
+        margin-top: 20px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        .musicplayer{
+            background-color: black;
+        }
+        p{
+
+            margin-left: -60px;
+
+            font-size: 15px;  
+            width: 300px;
+            color: white;
+        }
+        .albumlist{
+            width: 150px;
+
+            .album{
+
+                margin-left: -120px;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                
+                justify-content: center;
+                align-items: center;
+                width: 220px;
+                height: 220px;
+                background-color:  rgba(241, 241, 241, 0.11);
+                
+                
+                
+                .albumcover2{
+                    
+                    width:200px ;
+                }
+                
+            }
+            
+            @keyframes albums {
+                from{opacity: 100%;}
+                to{opacity: 50%;}
+                
+            }
+            
+        }
+    }
+    .linkbtn{
+        font-size: 15px;
+        margin-top: 10px;
+        padding: 10px 20px;
+        width: 50px;
+        background-color: rgb(255, 255, 255);
+        border: white 1px solid;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        color: black;}
+        .refs{
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            .linkbtn{
+                padding: 10px 20px;
+                margin-right: 15px;
+                width: 100px;
+                background-color: white;
+                border: white 1px solid;
+                border-radius: 5px;
+                text-decoration: none;
+                text-align: center;
+                color: black;
+        
+                .linkiconsp{
+                    margin-right: 25px;
+                    width: 20px;
+                    vertical-align:-4px;
+                }
+                .linkiconit{
+                    margin-right: 27px;
+                    width: 20px;
+                    vertical-align:-2px;
+                }
+                .linkiconyt{
+                    margin-right: 13px;
+                    width: 20px;
+                    vertical-align:-4px;
+                }
+        
+            }
+            
+            .linkbtn:hover{
+                animation-name: btnpurchase;
+                animation-duration: 0.2s;
+                animation-timing-function: ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        .tracks{
+            margin-top: 50px;
+            margin-right: 150px;;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        
+            .musicplayer{
+                height: 30px;
+                opacity: 0.8;
+                width: 500px;
+                border-radius: 0px;
+            }
+        }
+        button{
+            display: flex;
+            outline: none;
+            border: none;
+            background: none;
+        }
+        .playbutton:hover{
+            
+                animation-name: OpacityAnim;
+                animation-duration: 0.3s;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+                cursor: pointer;
+        }
+        button:focus{
+            outline: none;
+            border: none;
+        }
+        
+        .playbutton{
+            margin-top: 8px;
+            h1{
+                text-align: start;
+                color: white;
+                margin-top: 6px;
+                margin-left: 10px;
+                font-weight: normal;
+                font-size: 20px;
+                width: 250px}
+        }
+        
+        
+        .trackblock{
+            margin-left: 20px;
+            width: 100%;
+
+            display: flex;
+            
+            .track{
+                width: 100%;
+                margin: 0px;
+                border-bottom: rgba(136, 136, 136, 0.336) 1px solid;
+                height: 50px;
+                .icon{
+                    width: 30px;
+                }
+            }
+            .songtitle{
+                width: 100%;
+
+                border-bottom: rgba(136, 136, 136, 0.336) 1px solid;
+                width: 100px;
+                height: 50px;
+                background-color: rgba(255, 217, 0, 0);
+                .lyricbtn{
+                    width: 100%;
+                    visibility: hidden;
+
+                    opacity: 0;
+                    margin-top: 10px;
+                    border: 1px white solid;
+                    border-radius: 5px;
+                    height: 30px;
+                    color: white;
+                
+                    .lyrics{
+                        color: white;
+                        height: 20px;
+                        font-size: 15px;
+                        margin-top: -1px;
+                        width: 100px;
+                        text-align: center;
+                        font-weight: bold;
+                        font-family: 'Poppins','sans-serif';
+                    }
+                    
+                    .lyrics:hover{
+                        cursor: pointer;
+                        animation-name: btnlink2;
+                        animation-duration: 0.2s;
+                        animation-timing-function: ease-out;
+                        animation-fill-mode: forwards;
+                }
+                }
+                
+                .lyricbtn:hover{
+                    cursor: pointer;
+                    animation-name: btnlink;
+                    animation-duration: 0.2s;
+                    animation-timing-function: ease-out;
+                    animation-fill-mode: forwards;
+            }
+            }
+        }
+        @keyframes checked-anim {
+            50% {
+                width: 600px;
+                height: 500px;
+            }
+            100% {
+                width: 375px;
+                height: 60%;
+                border-radius: 0;
+            }
+        }
+}

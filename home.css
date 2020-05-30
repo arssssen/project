@@ -455,4 +455,211 @@ footer {
     animation-timing-function: ease-in;
     animation-fill-mode: forwards; }
 
+.titleam {
+  display: none; }
+
+.titleam2 {
+  text-align: center;
+  width: 200px; }
+
+@media screen and (max-width: 375px) {
+  .icons {
+    left: 35%; }
+
+  .abouttitle h1 {
+    margin-top: 40px; }
+
+  footer {
+    background-image: none;
+    background-color: #000; }
+
+  iframe {
+    width: 300px;
+    height: 200px; }
+
+  @keyframes checked-anim {
+    50% {
+      width: 600px;
+      height: 500px; }
+    100% {
+      width: 375px;
+      height: 60%;
+      border-radius: 0; } }
+  .titleam {
+    margin-left: 80px;
+    display: block;
+    color: white;
+    font-size: 45px;
+    text-align: center; }
+
+  .titleam2 {
+    display: block;
+    margin-top: 0px;
+    color: white;
+    font-size: 45px;
+    text-align: center; }
+
+  .homeimg {
+    margin: auto;
+    height: 150px;
+    border: none;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: none; }
+
+  #menu {
+    position: fixed;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    animation: not-checked-anim 0.4s both;
+    transition: .2s; }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: fit-content; }
+    .main .picmain {
+      margin-left: 30px;
+      width: 300px; }
+    .main .textmain {
+      text-align: center;
+      width: 300px;
+      margin-top: 20px;
+      margin-left: 40px;
+      margin-right: 100px;
+      color: white; }
+      .main .textmain .LatestRelease {
+        font-weight: normal;
+        letter-spacing: 4px; }
+      .main .textmain .albumname {
+        margin-top: -30px;
+        color: #FDD752;
+        font-size: 30px;
+        letter-spacing: 2px; }
+      .main .textmain .infoalbum {
+        font-size: 15px;
+        margin-top: -10px;
+        color: gray;
+        letter-spacing: 0.5px; }
+      .main .textmain .refs {
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column; }
+        .main .textmain .refs .linkbtn {
+          margin-bottom: 10px;
+          padding: 10px 20px;
+          width: 200px;
+          background-color: white;
+          border: white 1px solid;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          color: black; }
+          .main .textmain .refs .linkbtn .linkiconsp {
+            margin-right: 25px;
+            width: 20px;
+            vertical-align: -4px; }
+          .main .textmain .refs .linkbtn .linkiconit {
+            margin-right: 27px;
+            width: 20px;
+            vertical-align: -2px; }
+          .main .textmain .refs .linkbtn .linkiconyt {
+            margin-right: 13px;
+            width: 20px;
+            vertical-align: -4px; }
+  @keyframes btnlink {
+    from {
+      background-color: white;
+      color: black; }
+    to {
+      background-color: rgba(0, 0, 0, 0);
+      color: white; } }
+        .main .textmain .refs .linkbtn:hover {
+          animation-name: btnlink;
+          animation-duration: 0.2s;
+          animation-timing-function: ease-out;
+          animation-fill-mode: forwards; }
+
+  .albums {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; }
+
+  .textalbum {
+    text-align: center;
+    margin-left: 40px;
+    width: 300px; }
+    .textalbum h1 {
+      letter-spacing: 2px;
+      font-size: 25px;
+      color: white; }
+    .textalbum p {
+      letter-spacing: 0.5px;
+      margin-top: -15px;
+      font-size: 15px;
+      color: gray; }
+    .textalbum .albumlinkbtn {
+      margin-left: 40px;
+      padding: 10px 60px;
+      width: 100px;
+      background-color: #FDD752;
+      border: #FDD752 1px solid;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      color: black; }
+  @keyframes albumbtnlink {
+    from {
+      background-color: #FDD752;
+      color: black; }
+    to {
+      background-color: rgba(0, 0, 0, 0);
+      color: #FDD752; } }
+    .textalbum .albumlinkbtn:hover {
+      animation-name: albumbtnlink;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards; }
+
+  .picalbum {
+    margin-top: 20px;
+    width: 300px;
+    border: white 10px solid;
+    margin-left: 25px; }
+
+  .posters {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .posters .poster {
+      border-radius: 20px;
+      margin: 20px;
+      width: 200px; }
+  @keyframes iconsfoot {
+    from {
+      opacity: 100%; }
+    to {
+      opacity: 50%; } }
+    .posters a:hover {
+      animation-name: iconsfoot;
+      animation-duration: 0.1s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards; }
+
+  .live:hover {
+    animation-name: livebcg;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; } }
+
 /*# sourceMappingURL=home.css.map */

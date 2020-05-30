@@ -6,14 +6,29 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins','sans-serif';
-    background-image: url("imgs/vinyl_image.jpg");
+    background-image: url("imgs/arcticmonkeysrah.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+@keyframes btnlink {
 
+    from{background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);}
+    to{ background-color: rgb(255, 255, 255);color:rgb(0, 0, 0) }
+    
+}
+@keyframes btnlink2 {
 
+    from{color: rgb(255, 255, 255);}
+    to{color:rgb(0, 0, 0) }
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
 .homeimg{
   
     margin: auto;
@@ -131,6 +146,63 @@ html,body{
 }
 
 // // // // // // // // // // // // // // // // // // // // 
+.homeimg ul { 
+    position: relative;
+} 
+.homeimg  ul li { 
+    list-style: none; 
+    text-align: center; 
+
+} 
+.homeimg ul li a { 
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    font-size: 3em; 
+    padding: 5px 20px; 
+    display: inline-flex;
+    font-weight: 700; 
+    transition: 0.5s;
+
+
+}
+.homeimg ul:hover li a { 
+    color: rgba(255, 255, 255, 0.801);
+
+
+} 
+.homeimg    ul li:hover a { 
+    color: #000; 
+    background: rgba(255,255,255,1);
+
+
+}
+.homeimg ul li a:before { 
+    content: ''; 
+    position: absolute; 
+    top: 50%; left: 40%; 
+    transform: translate(-50%,-50%); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 5em; 
+    color: rgb(255, 255, 255); 
+    border-radius: 50%; 
+    z-index: -1; 
+    opacity: 0; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    letter-spacing: 500px; 
+    transition: letter-spacing 0.5s,left 0.5s; } 
+.homeimg ul li a:hover:before { 
+    content: attr(data-text);
+    color: rgb(255, 255, 255); 
+    opacity: 1; left: 50%; 
+    letter-spacing: 10px; 
+    width: 1800px; 
+    height: 1800px; } 
+
+
+//////////////////////////////////////////////////// 
 .homeimg ul { 
     position: relative;
 } 
@@ -320,142 +392,63 @@ footer{
 }
 .abouttitle{
     h1{
+        
         color: white;
         text-align: center;
         font-size: 70px;
         
     }
-
 }
 
 // Конец шаблона
+@keyframes posteranim {
 
-
-.albums{
+    from{background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);}
+    to{ background-color: rgb(255, 255, 255);color:rgb(0, 0, 0) }
     
+}
+.year{
     width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.schedule{
+    color: white;
+    margin: auto;
     display: flex;
-    flex-direction: column;
-    .albumlist{
-        margin: auto;
+    justify-content: center;
+    align-items: center;
+    .poster{
+        margin: 10px;
+        padding: 20px;
+        // background-color: brown;
+        width: 550px;
+        background-color: rgba(0, 0, 0, 0.322);
+        border-radius: 25px;
         display: flex;
-        .album{
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 30px;
-            width: 320px;
-            height: 400px;
-            background-color:  rgba(241, 241, 241, 0.11);
-            .p1{
-                height: 100px;
-                margin-top: -5px;
-                text-align: center;
-                width: 300px;
-                color: white;
-                font-size: 30px;
-
-            }
-            .p2{
-                height: 100px;
-                margin-top: 16px;
-                text-align: center;
-                width: 300px;
-                color: white;
-                font-size: 30px;
-            }
-            .albumcover1{
-
-                margin-top: 35px;
-                width:300px ;
-            }
-            .albumcover2{
-
-                margin-top: 10px;
-                width:300px ;
-            }
-            
-        }
-        @keyframes albums {
-            from{opacity: 100%;}
-            to{opacity: 50%;}
-            
-        }
-        .album:hover{
-            animation-name: albums;
+        &:hover{
+            cursor: pointer;
+            animation-name: posteranim;
             animation-duration: 0.2s;
-            animation-timing-function: ease-in;
+            animation-timing-function: ease-out;
             animation-fill-mode: forwards;
-            
+        }
+        .posterimage{
+            width: 250px;
+            border-radius: 25px;
+        }
+        .posterinfo{
+            text-align: center;
+            margin-left: 20px;
         }
     }
 }
+
+
 @media screen and (max-width: 375px) {
     
-    .albums{
     
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        .albumlist{
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            .album{
-                text-decoration: none;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin: 30px;
-                width: 220px;
-                height: 300px;
-                background-color:  rgba(241, 241, 241, 0.11);
-                .p1{
-                    height: 100px;
-                    margin-top: -5px;
-                    text-align: center;
-                    width: 200px;
-                    color: white;
-                    font-size: 20px;
-    
-                }
-                .p2{
-                    height: 100px;
-                    margin-top: 16px;
-                    text-align: center;
-                    width: 200px;
-                    color: white;
-                    font-size: 25px;
-                }
-                .albumcover1{
-    
-                    margin-top: 35px;
-                    width:200px ;
-                }
-                .albumcover2{
-    
-                    margin-top: 10px;
-                    width:200px ;
-                }
-                
-            }
-            @keyframes albums {
-                from{opacity: 100%;}
-                to{opacity: 50%;}
-                
-            }
-            .album:hover{
-                animation-name: albums;
-                animation-duration: 0.2s;
-                animation-timing-function: ease-in;
-                animation-fill-mode: forwards;
-                
-            }
-        }
-    }
     .icons{
     left: 35%;
 
@@ -466,19 +459,61 @@ footer{
             }}
 
     footer{
+        
         background-image: none;
         background-color: #000;
     }
-    @keyframes checked-anim {
-        50% {
-            width: 3000px;
-            height: 500px;
-        }
-        100% {
-            width: 100%;
-            height: 60%;
-            border-radius: 0;
-        }
-    }
-}
+ 
 
+        @keyframes checked-anim {
+            50% {
+                width: 600px;
+                height: 500px;
+            }
+            100% {
+                width: 375px;
+                height: 60%;
+                border-radius: 0;
+            }
+        }
+        .schedule{
+            color: white;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .poster{
+                margin: 10px;
+                padding: 20px;
+                // background-color: brown;
+                width: 300px;
+                height: 200;
+                background-color: rgba(0, 0, 0, 0.322);
+                border-radius: 25px;
+                display: flex;
+                &:hover{
+                    cursor: pointer;
+                    animation-name: posteranim;
+                    animation-duration: 0.2s;
+                    animation-timing-function: ease-out;
+                    animation-fill-mode: forwards;
+                }
+                .posterimage{
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 25px;
+                }
+                .posterinfo{
+                    h1{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 10px;
+                    }
+                    text-align: center;
+                    margin-left: 20px;
+                }
+            }
+        }
+}

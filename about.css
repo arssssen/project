@@ -284,6 +284,7 @@ footer {
   .currentmembers .mempics {
     display: flex; }
     .currentmembers .mempics .currentmemberspic {
+      background-color: rgba(255, 255, 255, 0.082);
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -291,8 +292,8 @@ footer {
       align-items: center; }
       .currentmembers .mempics .currentmemberspic .pic {
         width: 300px;
-        border-radius: 50%;
-        border: #ffeb78 5px solid; }
+        border-radius: 0px;
+        border: rgba(255, 255, 255, 0) 5px solid; }
       .currentmembers .mempics .currentmemberspic a {
         text-decoration: none; }
         .currentmembers .mempics .currentmemberspic a h1 {
@@ -305,6 +306,7 @@ footer {
         animation-timing-function: ease-in;
         animation-fill-mode: forwards; }
       .currentmembers .mempics .currentmemberspic ul {
+        margin-top: -10px;
         font-size: 20px;
         color: white;
         width: 250px; }
@@ -376,5 +378,193 @@ footer {
     height: 300px;
     width: 500px;
     border: rgba(255, 255, 255, 0.192) 10px solid; }
+
+.carousel-container {
+  border-radius: 20px;
+  width: 49%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border: rgba(255, 255, 255, 0.096) 5px solid; }
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  height: 500px; }
+
+@keyframes posteranim {
+  to {
+    background-color: white;
+    color: black; } }
+#prevBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  z-index: 10;
+  font-size: 30px;
+  color: white;
+  opacity: 0.5;
+  cursor: pointer; }
+  #prevBtn:hover {
+    cursor: pointer;
+    animation-name: posteranim;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; }
+
+#nextBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  z-index: 10;
+  font-size: 30px;
+  color: white;
+  opacity: 0.5;
+  cursor: pointer; }
+  #nextBtn:hover {
+    cursor: pointer;
+    animation-name: posteranim;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; }
+
+@media screen and (max-width: 375px) {
+  .icons {
+    left: 35%; }
+
+  .abouttitle h1 {
+    margin-top: 40px; }
+
+  footer {
+    background-image: none;
+    background-color: #000; }
+
+  .currentmembers {
+    margin: auto; }
+    .currentmembers h1 {
+      color: white;
+      font-size: 30px;
+      text-align: center; }
+    .currentmembers .mempics {
+      display: flex;
+      flex-direction: column; }
+      .currentmembers .mempics .currentmemberspic {
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.082);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .currentmembers .mempics .currentmemberspic .pic {
+          width: 300px;
+          border-radius: 0px;
+          border: rgba(255, 255, 255, 0) 5px solid; }
+        .currentmembers .mempics .currentmemberspic a {
+          text-decoration: none; }
+          .currentmembers .mempics .currentmemberspic a h1 {
+            color: #ffeb78;
+            font-size: 30px;
+            font-weight: normal; }
+        .currentmembers .mempics .currentmemberspic a:hover {
+          animation-name: iconsfoot;
+          animation-duration: 0.2s;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards; }
+        .currentmembers .mempics .currentmemberspic ul {
+          margin-top: -10px;
+          font-size: 20px;
+          color: white;
+          width: 250px; }
+
+  .history {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; }
+    .history .historytext p {
+      margin-left: -40px;
+      letter-spacing: 0.5px;
+      width: 300px;
+      color: white;
+      font-size: 15px; }
+    .history .historypic {
+      margin-left: 25px;
+      width: 300px;
+      border: rgba(255, 255, 255, 0.192) 10px solid; }
+
+  .history2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse; }
+    .history2 .historytext2 p {
+      margin-left: 25px;
+      letter-spacing: 0.5px;
+      width: 300px;
+      color: white;
+      font-size: 15px; }
+    .history2 .historypic2 {
+      margin-left: 25px;
+      height: 200px;
+      width: 300px;
+      border: rgba(255, 255, 255, 0.192) 10px solid; }
+
+  .history3 {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: -50px;
+    display: flex;
+    flex-direction: column; }
+    .history3 h1 {
+      font-size: 25px;
+      color: white; }
+    .history3 .historytext3 p {
+      width: 300px;
+      letter-spacing: 0.5px;
+      color: white;
+      font-size: 15px; }
+    .history3 .historytext4 p {
+      width: 300px;
+      letter-spacing: 0.5px;
+      color: white;
+      font-size: 15px; }
+    .history3 .historypic3 {
+      margin-left: 80px;
+      height: 300px;
+      width: 500px;
+      border: rgba(255, 255, 255, 0.192) 10px solid; }
+
+  @keyframes checked-anim {
+    50% {
+      width: 600px;
+      height: 500px; }
+    100% {
+      width: 375px;
+      height: 60%;
+      border-radius: 0; } }
+  .picg {
+    width: 300px;
+    height: 200px; }
+
+  .carousel-container {
+    border-radius: 20px;
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border: rgba(255, 255, 255, 0.096) 5px solid; } }
 
 /*# sourceMappingURL=about.css.map */
